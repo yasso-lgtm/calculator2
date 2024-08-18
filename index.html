@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    
+</head>
+<style>
+.calculator{
+width: 300px;
+margin: 50px auto;
+padding: 20px;
+border-radius:10px;
+box-shadow: 1px 1px 1px 1px rgba(163, 72, 72,72);
+}
+.calculator input {
+  height: 60px;
+  font-size: medium;
+  text-align: right;
+  margin:8px;
+}
+.calculator button{
+  height: 60px;
+  font-size: medium;
+}
+
+
+</style>
+<body>
+
+<div class="container">
+    <div class="calculator bg-dark">
+        <input type="text" class="form-control" id="display" readonly>
+        
+        <div class="row">
+          <div class="col-3">
+            <button class="btn btn-danger w-100" onclick="clear_display()">C</button>
+
+          </div>
+          <div class="col-3">
+           <button class="btn btn-secondary w-100" onclick="append('/')">/</button>
+          </div>
+
+          <div class="col-3">
+            <button class="btn btn-secondary w-100" onclick="append('*')">*</button>
+          </div>
+          <div class="col-3">
+           <button class="btn btn-secondary w-100" onclick="append('-')">-</button>
+          </div>
+
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-3">
+              <button class="btn btn-light w-100" onclick="append('7')" >7</button>
+  
+            </div>
+            <div class="col-3">
+             <button class="btn btn-light w-100" onclick="append('8')">8</button>
+            </div>
+  
+            <div class="col-3">
+              <button class="btn btn-light w-100" onclick="append('9')">9</button>
+            </div>
+            <div class="col-3">
+             <button class="btn btn-secondary w-100" onclick="append('+')">+</button>
+            </div>
+  
+          </div>
+          <div class="row mt-2">
+            <div class="col-3">
+              <button class="btn btn-light w-100" onclick="append('4')" >4</button>
+  
+            </div>
+            <div class="col-3">
+             <button class="btn btn-light w-100" onclick="append('5')">5</button>
+            </div>
+  
+            <div class="col-3">
+              <button class="btn btn-light w-100" onclick="append('6')">6</button>
+            </div>
+            <div class="col-3">
+             <button class="btn btn-secondary w-100" onclick="result()">=</button>
+            </div>
+  
+          </div>
+          <div class="row mt-2">
+            <div class="col-3">
+              <button class="btn btn-light w-100" onclick="append('1')" >1</button>
+  
+            </div>
+            <div class="col-3">
+             <button class="btn btn-light w-100" onclick="append('2')">2</button>
+            </div>
+  
+            <div class="col-3">
+              <button class="btn btn-light w-100" onclick="append('3')">3</button>
+            </div>
+            <div class="col-3">
+             <button class="btn btn-light w-100" onclick="append('0')">0</button>
+            </div>
+  
+          </div>
+
+
+
+
+    </div>
+
+</div>
+
+
+</body>
+
+<script src="js/bootstrap.js"></script>
+<script>
+function clear_display() {
+        document.getElementById('display').value = '';
+    }
+function append(element) {
+document.getElementById("display").value +=element; 
+}
+
+
+function result() {
+  document.getElementById("display").value=eval(document.getElementById("display").value);
+}
+
+
+
+</script>
+
+
+</body>
+</html>
