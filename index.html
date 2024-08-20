@@ -4,32 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap.css">
     
 </head>
-<style>
-.calculator{
-width: 300px;
-margin: 50px auto;
-padding: 20px;
-border-radius:10px;
-box-shadow: 1px 1px 1px 1px rgba(163, 72, 72,72);
-}
-.calculator input {
-  height: 60px;
-  font-size: medium;
-  text-align: right;
-  margin:8px;
-}
-.calculator button{
-  height: 60px;
-  font-size: medium;
-}
 
-
-</style>
 <body>
-
+  <style>
+  .calculator{
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius:10px;
+    box-shadow: 1px 1px 1px 1px rgba(163, 72, 72,72);
+    }
+    .calculator input {
+      height: 60px;
+      font-size: medium;
+      text-align: right;
+      margin:8px;
+    }
+    .calculator button{
+      height: 60px;
+      font-size: medium;
+    }
+    
+    
+    </style>
 <div class="container">
     <div class="calculator bg-dark">
         <input type="text" class="form-control" id="display" readonly>
@@ -114,7 +114,7 @@ box-shadow: 1px 1px 1px 1px rgba(163, 72, 72,72);
 
 </body>
 
-<script src="js/bootstrap.js"></script>
+<script src="bootstrap.js"></script>
 <script>
 function clear_display() {
         document.getElementById('display').value = '';
